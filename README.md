@@ -27,11 +27,19 @@ Este proyecto es una API RESTful desarrollada en **Java** utilizando el framewor
 3. Configurar las siguientes propiedades en el archivo `application.properties` o `application.yml`:
 
    ```properties
-   spring.datasource.url=jdbc:mysql://localhost:3306/gestor_clientes
-   spring.datasource.username=tu_usuario
-   spring.datasource.password=tu_contraseña
-   spring.jpa.hibernate.ddl-auto=update
-   spring.flyway.enabled=true
+     spring.application.name=gestor_clientes
+    spring.datasource.url=jdbc:mysql://localhost:3306/gestor_clientes
+    spring.datasource.username=root
+    spring.datasource.password=mysql
+    spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+    spring.flyway.enabled=true
+    spring.flyway.locations=classpath:db/migration
+    spring.jpa.show-sql=true
+    spring.jpa.hibernate.ddl-auto=none
+    spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
+    server.port=8080
+    spring.security.user.name=admin
+    spring.security.user.password=admin123
    ```
 
 ---
